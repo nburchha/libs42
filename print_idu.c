@@ -6,11 +6,24 @@
 /*   By: niklasburchhardt <niklasburchhardt@stud    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/17 16:34:24 by nburchha          #+#    #+#             */
-/*   Updated: 2024/01/04 00:29:23 by niklasburch      ###   ########.fr       */
+/*   Updated: 2024/01/06 14:29:22 by niklasburch      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libs42.h"
+
+int			ft_count_digits(unsigned int n)
+{
+	int		i;
+
+	i = 1;
+	while (n >= 10)
+	{
+		n /= 10;
+		i++;
+	}
+	return (i);
+}
 
 /// @brief Outputs the unsigned integer ’n’ to the given file descriptor.
 /// @param n The integer to output

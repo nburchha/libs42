@@ -6,7 +6,7 @@
 /*   By: niklasburchhardt <niklasburchhardt@stud    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/11 14:26:54 by nburchha          #+#    #+#             */
-/*   Updated: 2024/01/03 23:42:55 by niklasburch      ###   ########.fr       */
+/*   Updated: 2024/01/06 14:31:36 by niklasburch      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -50,15 +50,21 @@ static char	*make_split_str(const char *s, char delim, int *i)
 }
 
 /// @brief frees the 2d array in case of a allocation fail
-void	*free_split(char **result)
+void	free_split(char **split)
 {
 	int	i;
 
 	i = 0;
-	while (result[i] != NULL)
-		free(result[i++]);
-	free(result);
-	return (NULL);
+	if (split == NULL)
+		return ;
+	while (split[i])
+	{
+		free(split[i]);
+		split[i] = NULL;
+		i++;
+	}
+	free(split);
+	split = NULL;
 }
 
 /// @brief Allocates (with malloc(3)) and returns an array
@@ -91,7 +97,7 @@ char	**ft_split(char const *s, char c)
 		{
 			result[j++] = make_split_str(s, c, &i);
 			if (!result[j - 1])
-				return (free_split(result));
+				return (free_split(result), NULL);
 		}
 	}
 	return (result);
