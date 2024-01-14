@@ -3,16 +3,16 @@
 /*                                                        :::      ::::::::   */
 /*   print_idu.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: niklasburchhardt <niklasburchhardt@stud    +#+  +:+       +#+        */
+/*   By: nburchha <nburchha@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/17 16:34:24 by nburchha          #+#    #+#             */
-/*   Updated: 2024/01/06 14:29:22 by niklasburch      ###   ########.fr       */
+/*   Updated: 2024/01/14 15:32:44 by nburchha         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libs42.h"
 
-int			ft_count_digits(unsigned int n)
+int	ft_count_digits(unsigned int n)
 {
 	int		i;
 

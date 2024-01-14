@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   libs42.h                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: niklasburchhardt <niklasburchhardt@stud    +#+  +:+       +#+        */
+/*   By: nburchha <nburchha@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/05 12:00:59 by nburchha          #+#    #+#             */
-/*   Updated: 2024/01/06 14:31:15 by niklasburch      ###   ########.fr       */
+/*   Updated: 2024/01/14 18:05:45 by nburchha         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,6 +20,7 @@
 # include <stdio.h>
 # include <stdarg.h>
 # include <fcntl.h>
+# include <stdint.h>
 
 typedef struct s_list
 {
